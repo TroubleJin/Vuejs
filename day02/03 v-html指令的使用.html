@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2 v-html="url"></h2>
+  <h2 >{{message}},隐藏的部分</h2>
+  <h2 v-text="message">,隐藏的部分</h2>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      counter: 0,
+      url: '<a href="http://www.baidu.com">百度一下</a>',
+      message: '你好阿'
+    },
+    methods: {
+    }
+  })
+</script>
+</body>
+</html>

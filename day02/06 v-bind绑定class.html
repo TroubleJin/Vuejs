@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h2 class="active">你好阿1</h2>
+  <h2 :class="active">你好阿2</h2>
+  <h2 :class="{active: isactive,line: isline}">你好阿3</h2>
+  <h2 :class="getclass()">你好阿4</h2>
+  <button v-on:click="change">变色</button>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      counter: 0,
+      active: 'aaa',
+      isactive: true,
+      isline: false
+    },
+    methods: {
+      change: function () {
+        this.isactive = !this.isactive
+      },
+      getclass: function () {
+        return {active: this.isactive, line: this.isline}
+      }
+    }
+  })
+</script>
+</body>
+</html>

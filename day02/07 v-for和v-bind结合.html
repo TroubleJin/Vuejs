@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .active {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <ul>
+<!--    <li v-for="(item,index) in movies" v-on:click="activeIndex=index" v-bind:class="{active:activeIndex==index}" >{{index}}-{{ item }}</li>-->
+    <li v-for="(item,index) in movies" v-on:click="changeindex(index)" v-bind:class="{active:activeIndex==index}" >{{index}}-{{ item }}</li>
+  </ul>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      movies: ['火影','海贼','柯南'],
+      isred: false,
+      activeIndex: 0
+    },
+    methods: {
+      changeindex: function (index){
+        this.activeIndex = index
+      }
+    }
+  })
+</script>
+</body>
+</html>
