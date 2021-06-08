@@ -13,7 +13,8 @@
 <div id="app">
   <ul>
 <!--    <li v-for="(item,index) in movies" v-on:click="activeIndex=index" v-bind:class="{active:activeIndex==index}" >{{index}}-{{ item }}</li>-->
-    <li v-for="(item,index) in movies" v-on:click="changeindex(index)" v-bind:class="{active:activeIndex==index}" >{{index}}-{{ item }}</li>
+<!--    <li v-for="(item,index) in movies" v-on:click="changeindex(index)" v-bind:class="activeIndex==index" >{{index}}-{{ item }}</li>-->
+    <li v-for="(item,index) in movies" v-on:click="changeindex(index)" v-bind:class="{active:jud(index)}" >{{index}}-{{ item }}</li>
   </ul>
 </div>
 <script src="../js/vue.js"></script>
@@ -28,6 +29,13 @@
     methods: {
       changeindex: function (index){
         this.activeIndex = index
+      },
+      jud: function (index){
+        if( this.activeIndex==index){
+          return true
+        }else {
+          return false
+        }
       }
     }
   })
