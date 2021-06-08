@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <button>按钮</button>
+  <button>按钮</button>
+  <button>按钮</button>
+  <button>按钮</button>
+  <button>按钮</button>
+</div>
+<!--<script src="../js/vue.js"></script>-->
+<script>
+  // 没有块级作用域的问题,需要靠闭包解决
+  var btns = document.getElementsByTagName('button');
+  // for(var i =0 ; i < btns.length;i++){
+  //   btns[i].addEventListener('click',function (){
+  //     console.log('第'+i+'按钮')
+  //   })
+  // }
+  // for(var i =0 ; i < btns.length;i++){
+  //   (function (num){
+  //     btns[i].addEventListener('click',function (){
+  //       // index = i + 1
+  //       console.log('第'+num+'按钮')
+  //     })
+  //   })(i)
+  // }
+  // 用let 可以完美解决,有独立作用域
+  for(let i =0 ; i < btns.length;i++){
+    btns[i].addEventListener('click',function (){
+      console.log('第'+i+'按钮')
+    })
+  }
+</script>
+</body>
+</html>
