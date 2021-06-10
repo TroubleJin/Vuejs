@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="533ddbe1-cb70-4923-836b-cb6c5b6b3155" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/05-条件判断/02-v-show的使用.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-循环遍历/01-v-for遍历数组.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-循环遍历/02-v-for遍历对象.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/06-循环遍历/03-v-for添加key.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05-条件判断/01-v-if使用.html" beforeDir="false" afterPath="$PROJECT_DIR$/05-条件判断/01-v-if使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06-循环遍历/04-哪些数组是响应式的.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06-循环遍历/05-点击变成红色.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-计算属性/04 计算属性和method属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/03-计算属性/04 计算属性和method属性.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622618992229</updated>
       <workItem from="1622618993604" duration="19223000" />
-      <workItem from="1623206600244" duration="7879000" />
+      <workItem from="1623206600244" duration="9972000" />
     </task>
     <servers />
   </component>
