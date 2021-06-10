@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--   .stop防止冒泡-->
+  <div @click="divClick">
+    aaaaa
+    <button @click.stop="btnClick">按钮</button>
+  </div>
+  <br>
+<!--  prevent修饰使用,取消默认的点击-->
+  <form action="baidu.com">
+    <input type="submit" value="提交" @click.prevent="submitClick">
+  </form>
+<!--  监听某个按键的点击-->
+  <input type="text" v-on:keyup.enter="keyUp">
+<!--  .once只允许点击一次-->
+  <button @click.once="btn2Click">按钮2</button>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      counter: 0
+    },
+    methods: {
+      divClick: function (){
+        console.log('divClick');
+      },
+      btnClick(){
+        console.log('btnClick');
+      },
+      submitClick(){
+        console.log('submitClick');
+      },
+      keyUp(){
+        console.log('keyUp');
+      },
+      btn2Click(){
+        console.log('btn2Click');
+      }
+    }
+  })
+</script>
+</body>
+</html>

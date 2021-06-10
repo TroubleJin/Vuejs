@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  const name = 'Tboy';
+  const age = 18;
+  const height = 1.8;
+  // Es5写法：
+  const obj = {
+    name : name,
+    age : age,
+    height : height,
+    run: function (){
+      console.log('run');
+    }
+  }
+  console.log(obj);
+  // Es6写法:
+  const obj2 = {
+    name,
+    age,
+    height,
+    run(){
+      console.log('run');
+    }
+  }
+  console.log(obj2);
+
+
+</script>
+</body>
+</html>

@@ -21,6 +21,8 @@
   //     console.log('第'+i+'按钮')
   //   })
   // }
+
+  //  第一种正确方式
   // for(var i =0 ; i < btns.length;i++){
   //   (function (num){
   //     btns[i].addEventListener('click',function (){
@@ -29,6 +31,7 @@
   //     })
   //   })(i)
   // }
+  //  第二种正确方式
   // 用let 可以完美解决,有独立作用域
   for(let i =0 ; i < btns.length;i++){
     btns[i].addEventListener('click',function (){

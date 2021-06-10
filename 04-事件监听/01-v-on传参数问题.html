@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <button @click="btnClick">按钮1</button>
+<!--  // 默认写(),Vue把events传进来了-->
+  <button @click="btnClick2">按钮2</button>
+  <button @click="btnClick3()">按钮3</button>
+<!--  同时都需要传-->
+  <button @click="btnClick4(123,$event)">按钮4</button>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      counter: 0
+    },
+    methods: {
+      btnClick: function (){
+        console.log('btnClick');
+      },
+      btnClick2(events){
+        console.log(events);
+      },
+      btnClick3(name){
+        console.log(name);
+      },
+      btnClick4(name,$event){
+        console.log(name);
+        console.log($event);
+      },
+    }
+  })
+</script>
+</body>
+</html>
