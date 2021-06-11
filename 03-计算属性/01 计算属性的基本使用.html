@@ -9,7 +9,7 @@
   <h2>{{ firstName }}  {{ LastName }}</h2>
   <h2>{{ firstName + ' ' + LastName }} </h2>
   <h2>{{ getFullName() }} </h2>
-  <h2>{{ fullName }} </h2>
+  <h2>{{ fullName('123') }} </h2>
 </div>
 <script src="../js/vue.js"></script>
 <script>
@@ -21,8 +21,15 @@
     },
     // computed计算属性
     computed: {
+      // fullName(){
+      //   return function (index){
+      //     return index
+      //   }
+      // }
       fullName: function (){
-        return this.firstName + ' ' + this.LastName
+        return function (index){
+         return  this.firstName + ' ' + this.LastName + index
+        }
       }
     },
     methods: {

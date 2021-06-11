@@ -56,12 +56,32 @@ const app = new Vue({
     }
   },
   computed: {
-    getFinalPrice: function (){
-      let all_price = 0;
-      for (let i=0;i<this.books.length;i++) {
-        all_price += this.books[i].count * this.books[i].price
+
+    //  1.普通for循环
+    // getFinalPrice: function (){
+    //   let all_price = 0;
+    //   for (let i=0;i<this.books.length;i++) {
+    //     all_price += this.books[i].count * this.books[i].price
+    //   }
+    //   return all_price
+    // },
+
+    //  2. for in 的方式
+    // getFinalPrice(){
+    //   let all_price = 0;
+    //   for (let i in this.books){
+    //     all_price += this.books[i].count * this.books[i].price
+    //   }
+    //   return all_price
+    // }
+
+    //  3. for of 的方式
+    getFinalPrice(){
+      let all_price = 0
+      for (let book of this.books){
+        all_price += book.price * book.count
       }
       return all_price
-    },
+    }
   }
 })

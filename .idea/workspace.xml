@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="533ddbe1-cb70-4923-836b-cb6c5b6b3155" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/07-书籍购物车/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-书籍购物车/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/07-书籍购物车/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06-循环遍历/04-哪些数组是响应式的.html" beforeDir="false" afterPath="$PROJECT_DIR$/06-循环遍历/04-哪些数组是响应式的.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-计算属性/01 计算属性的基本使用.html" beforeDir="false" afterPath="$PROJECT_DIR$/03-计算属性/01 计算属性的基本使用.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07-书籍购物车/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/07-书籍购物车/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622618992229</updated>
       <workItem from="1622618993604" duration="19223000" />
-      <workItem from="1623206600244" duration="14392000" />
+      <workItem from="1623206600244" duration="16065000" />
     </task>
     <servers />
   </component>
