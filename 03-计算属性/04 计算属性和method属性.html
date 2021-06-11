@@ -7,6 +7,11 @@
 <body>
 <div id="app">
   <h2>{{fullName}}</h2>
+  <h2>{{fullName}}</h2>
+  <h2>{{fullName}}</h2>
+  <h2>{{fullName}}</h2>
+  <h2>{{fullName}}</h2>
+  <h2>{{fullName}}</h2>
 </div>
 <script src="../js/vue.js"></script>
 <script>
@@ -18,6 +23,7 @@
     },
     computed: {
       fullName: function (){
+        console.log('computed')
         return this.firstName + ' ' + this.LastName
       }
     },
