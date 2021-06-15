@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="533ddbe1-cb70-4923-836b-cb6c5b6b3155" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/08-v-model的指令/01-v-model的基本使用.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/08-v-model的指令/02-v-model原理.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08-v-model的指令/03-v-model结合radio属性.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/08-v-model的指令/04-v-model结合checkbox属性.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622618992229</updated>
       <workItem from="1622618993604" duration="19223000" />
-      <workItem from="1623206600244" duration="21803000" />
+      <workItem from="1623206600244" duration="22716000" />
     </task>
     <servers />
   </component>
