@@ -56,7 +56,6 @@ const app = new Vue({
     }
   },
   computed: {
-
     //  1.普通for循环
     // getFinalPrice: function (){
     //   let all_price = 0;
@@ -76,12 +75,24 @@ const app = new Vue({
     // }
 
     //  3. for of 的方式
+    // getFinalPrice(){
+    //   let all_price = 0
+    //   for (let book of this.books){
+    //     all_price += book.price * book.count
+    //   }
+    //   return all_price
+    // }
+
+    // 箭头函数错误的做法：箭头函数绑定了父级作用域的上下文，this 将不会按照期望指向 Vue 实例
+    // getFinalPrice(){
+    //   return this.books.reduce((previousValue,book) =>  previousValue + book.count * book.price)
+    // }
     getFinalPrice(){
-      let all_price = 0
-      for (let book of this.books){
-        all_price += book.price * book.count
-      }
-      return all_price
+      console.log(this.books.filter(book => book.price  < 100 ))
+      console.log(this.books.reduce((previousValue,book) => previousValue + book.count * book.price,0))
+      return this.books.reduce(function (previousValue,book){
+        return previousValue + book.count * book.price
+      },0)
     }
   }
 })

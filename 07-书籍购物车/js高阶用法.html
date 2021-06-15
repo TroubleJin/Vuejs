@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  const nums = [10,20,111,40,3,4,5,6,9]
+  // let newNums = []
+  // for (let i = 0;i<nums.length;i++){
+  //   if( nums[i] < 100 ){
+  //     newNums.push(nums[i])
+  //   }
+  // }
+  // console.log(newNums)
+
+// filter中的函数有一个要要求，必须返回true或者false
+//  当返回true时,函数会把这次回调的n自动添加到新的数组
+//  当返回false时,函数会把这次回调的n自动过滤掉
+  let newNums = nums.filter(function (n){
+    return n < 100
+  })
+  console.log(newNums)
+
+//  maps函数的使用
+  let newNums2 = newNums.map(function (n){
+    return n * 2
+  })
+  console.log(newNums2);
+
+//  reduce函数的使用,previousValue是后面初始化的值也就是0,n是数组的值
+  let total = newNums.reduce(function (previousValue,n){
+    return previousValue + n
+  },0)
+  console.log(total);
+
+//  混合使用
+  let totals = nums.filter(function (n){
+    return n < 100
+  }).map(function (n){
+    return n* 2
+  }).reduce(function (previousValue,n){
+    return previousValue + n
+  },0)
+  console.log(totals);
+//  箭头函数
+  let numTotals = nums.filter(n=>n < 100).map(n => n * 2).reduce((previousValue,n) => previousValue+n,0)
+  console.log(numTotals);
+</script>
+</body>
+</html>
