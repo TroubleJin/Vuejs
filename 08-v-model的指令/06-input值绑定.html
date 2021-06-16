@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <label v-for="item in fruits" :for="item">
+    <input type="checkbox" :value="item" :id="item" v-model="fruitsList"> {{item}}
+  </label>
+  <br>
+  {{ fruitsList }}
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      fruits: ['苹果','香蕉','猕猴桃'],
+      fruitsList: []
+    },
+    methods: {
+    }
+  })
+</script>
+</body>
+</html>
