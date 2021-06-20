@@ -15,6 +15,7 @@
 <script type="text/x-template" id="cpn">
 <div>
   <h2>我是标题1</h2>
+  <h2>{{ title }}</h2>
   <p>我是内容,哈哈哈</p>
 </div>
 </script>
@@ -36,7 +37,13 @@
     },
     components: {
       'cpn1': {
-        template: '#cpn'
+        template: '#cpn',
+        //组件内的数据必须是data函数并且return回去
+        data(){
+          return  {
+            title : 'Abc'
+          }
+        }
       },
       'cpn2': {
         template: '#cpn2'
