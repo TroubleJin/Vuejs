@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <cpn :message="message" :fruits="fruits"></cpn>
+  <cpn :fruits="fruits"></cpn>
+</div>
+
+
+<template id="cpn">
+  <div>
+    <h2>{{ message }}</h2>
+    <ul>
+      <li v-for="item in fruits"> {{ item }}</li>
+    </ul>
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: '你好阿',
+      fruits: ['香蕉','苹果','猕猴桃']
+    },
+    methods: {
+    },
+    components: {
+       cpn: {
+         template: '#cpn',
+         //列表写法
+         // props: ['message','fruits']
+         props: {
+           message: {
+             type: String,
+             default: '默认内容'
+           },
+           fruits: {
+             type: Array,
+             default: ['西红柿'],
+             required: true
+           }
+         }
+       }
+    }
+  })
+</script>
+</body>
+</html>
