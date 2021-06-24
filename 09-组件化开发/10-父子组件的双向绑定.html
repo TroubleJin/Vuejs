@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <cpn :number1="num1" :number2="num2"
+       @num1change="num1change"
+       @num2change="num2change"
+  ></cpn>
+</div>
+<template id="cpn">
+  <div>
+    <h2>props: {{number1}}</h2>
+    <h2>data: {{cnumber1}}</h2>
+<!--    <input type="text" v-model="cnumber1" >-->
+    <input type="text" :value="cnumber1" @input="number1Click($event)">
+    <h2>props: {{number2}}</h2>
+    <h2>data: {{cnumber2}}</h2>
+    <input type="text" :value="cnumber2" @input="number2Click($event)">
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      num1: 100,
+      num2: 200
+    },
+    methods: {
+      num1change(value){
+        this.num1 = parseInt(value)
+      },
+      num2change(value){
+        this.num2 = parseInt(value)
+      }
+    },
+    components: {
+      'cpn': {
+        template: '#cpn',
+        props: {
+          number1: {
+            type: Number
+          },
+          number2: {
+            type: Number
+          }
+        },
+        data(){
+          return  {
+            cnumber1: this.number1,
+            cnumber2: this.number2
+          }
+        },
+        methods: {
+          number1Click(event){
+            this.cnumber1 = event.target.value
+            this.$emit('num1change', this.cnumber1)
+
+            this.cnumber1
+          },
+          number2Click(event){
+            this.cnumber2 = event.target.value
+            this.$emit('num2change',this.cnumber2)
+          }
+        }
+      }
+    }
+  })
+</script>
+</body>
+</html>
