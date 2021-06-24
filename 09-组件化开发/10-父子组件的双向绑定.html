@@ -60,11 +60,12 @@
             this.cnumber1 = event.target.value
             this.$emit('num1change', this.cnumber1)
 
-            this.cnumber1
+            this.cnumber2 = this.cnumber1 / 100
           },
           number2Click(event){
             this.cnumber2 = event.target.value
             this.$emit('num2change',this.cnumber2)
+            this.cnumber1 = this.cnumber2 * 100
           }
         }
       }
