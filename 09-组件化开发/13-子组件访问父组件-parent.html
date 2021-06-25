@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <cpn></cpn>
+</div>
+<template id="cpn">
+  <div>
+    <button @click="btnClick">按钮</button>
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      counter: 0
+    },
+    methods: {
+    },
+    components: {
+      cpn: {
+        template: '#cpn',
+        methods: {
+          btnClick(){
+            console.log(this.$parent.counter);
+          }
+        }
+      }
+    }
+  })
+</script>
+</body>
+</html>
