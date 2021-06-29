@@ -6,15 +6,15 @@
 </head>
 <body>
 <div id="app">
-  <cpn><span slot="center">新的中间内容</span></cpn>
+  <cpn><button slot="center">新的中间内容</button></cpn>
   <cpn></cpn>
   <cpn></cpn>
 </div>
 <template id="cpn">
   <div>
-    <slot name="left">左面</slot>
-    <slot name="center">中间</slot>
-    <slot name="right">右面</slot>
+    <slot name="left"><span>左面</span></slot>
+    <slot name="center"><span>中间</span></slot>
+    <slot name="right"><span>右面</span></slot>
   </div>
 </template>
 <script src="../js/vue.js"></script>
