@@ -5,6 +5,33 @@
   <title>Title</title>
 </head>
 <body>
-
+<div id="app">
+  <cpn><span slot="center">新的中间内容</span></cpn>
+  <cpn></cpn>
+  <cpn></cpn>
+</div>
+<template id="cpn">
+  <div>
+    <slot name="left">左面</slot>
+    <slot name="center">中间</slot>
+    <slot name="right">右面</slot>
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      counter: 0
+    },
+    methods: {
+    },
+    components: {
+      'cpn': {
+        template: '#cpn',
+      }
+    }
+  })
+</script>
 </body>
 </html>
