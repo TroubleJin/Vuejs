@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <cpn></cpn>
+  <cpn :messagechild="message"><button>按钮</button></cpn>
+  <cpn>
+    <div>好</div>
+    <i>不好</i>
+    <span>很差</span>
+  </cpn>
+</div>
+
+<template id="cpn">
+  <div>
+    {{ messagechild }}
+    <h2>我是组件开头</h2>
+    <h3>我是组件结尾</h3>
+    <slot>我是默认值</slot>
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: '内容1213'
+    },
+    methods: {
+    },
+    components: {
+      'cpn': {
+        template: '#cpn',
+        props: ['messagechild']
+      }
+    }
+  })
+</script>
+</body>
+</html>
