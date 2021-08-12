@@ -15,11 +15,12 @@
   <div>
     <h2>props: {{number1}}</h2>
     <h2>data: {{cnumber1}}</h2>
-<!--    <input type="text" v-model="cnumber1" >-->
     <input type="text" :value="cnumber1" @input="number1Click($event)">
+
     <h2>props: {{number2}}</h2>
     <h2>data: {{cnumber2}}</h2>
     <input type="text" :value="cnumber2" @input="number2Click($event)">
+
   </div>
 </template>
 <script src="../js/vue.js"></script>
@@ -61,12 +62,14 @@
             this.$emit('num1change', this.cnumber1)
 
             this.cnumber2 = this.cnumber1 / 100
+            this.$emit('num2change', this.cnumber2)
           },
           number2Click(event){
             this.cnumber2 = event.target.value
             this.$emit('num2change',this.cnumber2)
 
             this.cnumber1 = this.cnumber2 * 100
+            this.$emit('num1change', this.cnumber1)
           }
         }
       }
