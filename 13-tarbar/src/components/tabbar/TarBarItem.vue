@@ -2,7 +2,7 @@
   <div class="tar-bar-item" @click="itemClick">
     <slot v-if="!isActive" name="item-icon"></slot>
     <slot v-else name="item-icon-active"></slot>
-    <div :class="{active: isActive}">
+    <div :style="isActiveColor">
       <slot name="item-text"></slot>
     </div>
   </div>
@@ -13,11 +13,19 @@ export default {
   name: "TarBarItem",
   props: {
     link: String,
-    required: true
+    required: true,
+    activeColor: {
+      default() {
+        return 'red';
+      }
+    }
   },
-  data(){
-    return {
-      isActive: true
+  computed: {
+    isActive(){
+      return this.$route.path.indexOf(this.link) !== -1
+    },
+    isActiveColor(){
+      return this.isActive ? {color: this.activeColor} : {}
     }
   },
   methods: {
@@ -41,8 +49,5 @@ export default {
   margin-top: 3px;
   vertical-align: middle;
   margin-bottom: 2px;
-}
-.active {
-  color: red;
 }
 </style>

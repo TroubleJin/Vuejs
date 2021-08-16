@@ -2,7 +2,7 @@
   <div id="app">
     <router-view></router-view>
     <TabBar>
-      <TarBarItem link="/home">
+      <TarBarItem link="/home" activeColor="deeppink">
         <img slot="item-icon" alt="" src="./assets/img/tabbar/home.svg">
         <img slot="item-icon-active" alt="" src="./assets/img/tabbar/home_active.svg">
         <div slot="item-text">首页</div>
