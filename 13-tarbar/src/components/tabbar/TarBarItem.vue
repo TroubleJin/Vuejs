@@ -1,5 +1,5 @@
 <template>
-  <div class="tar-bar-item">
+  <div class="tar-bar-item" @click="itemClick">
     <slot v-if="!isActive" name="item-icon"></slot>
     <slot v-else name="item-icon-active"></slot>
     <div :class="{active: isActive}">
@@ -11,9 +11,19 @@
 <script>
 export default {
   name: "TarBarItem",
+  props: {
+    link: String,
+    required: true
+  },
   data(){
     return {
       isActive: true
+    }
+  },
+  methods: {
+    itemClick(){
+      this.$router.push(this.link)
+      console.log('itemClick')
     }
   }
 }
