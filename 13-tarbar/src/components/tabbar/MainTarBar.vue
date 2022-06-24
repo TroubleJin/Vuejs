@@ -1,13 +1,13 @@
 <template>
   <TabBar>
     <TarBarItem link="/home" activeColor="deeppink">
-      <img slot="item-icon" alt="" src="../../assets/img/tabbar/home.svg">
-      <img slot="item-icon-active" alt="" src="../../assets/img/tabbar/home_active.svg">
+      <img slot="item-icon" alt="" src="@/assets/img/tabbar/home.svg">
+      <img slot="item-icon-active" alt="" src="@/assets/img/tabbar/home_active.svg">
       <div slot="item-text">首页</div>
     </TarBarItem>
     <TarBarItem link="/category">
-      <img slot="item-icon" alt="" src="../../assets/img/tabbar/category.svg">
-      <img slot="item-icon-active" alt="" src="../../assets/img/tabbar/category_active.svg">
+      <img slot="item-icon" alt="" src="@/assets/img/tabbar/category.svg">
+      <img slot="item-icon-active" alt="" src="@/assets/img/tabbar/category_active.svg">
       <div slot="item-text">分类</div>
     </TarBarItem>
     <TarBarItem link="/cart">
@@ -36,5 +36,4 @@ export default {
 </script>
 
 <style scoped>
-  @import "../../assets/css/base.css";
 </style>
