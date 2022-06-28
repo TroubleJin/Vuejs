@@ -1,10 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="./layui/css/layui.css" rel="stylesheet">
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>栅格系统</title>
 </head>
 <body>
-$END$
+
+<!--  1.定义行   layui-row
+      2.定义列   layui-col-md* *占用多少
+      3.列间距   layui-col-space*
+      4.列偏移   layui-col-md-offset*
+      5.列嵌套
+-->
+<!--  布局容器-->
+<div class="layui-container">
+  <div class="layui-row">
+    <div class="layui-col-md5" style="background-color: deepskyblue;">
+      内容 5/12
+    </div>
+    <div class="layui-col-md7" style="background-color: bisque;">
+      内容 7/12
+    </div>
+    <div class="layui-col-md4" style="background-color: powderblue;">
+      内容 4/12
+    </div>
+    <div class="layui-col-md4" style="background-color: mediumblue;">
+      内容 4/12
+    </div>
+<!--    会换行-->
+    <div class="layui-col-md6" style="background-color: grey;">
+      内容 6/12
+    </div>
+  </div>
+<!--  列边距-->
+  <div class="layui-row layui-col-space10">
+    <div class="layui-col-md4 " style="background-color: green;">
+      <div style="background-color: hotpink;">4</div>
+    </div>
+    <div class="layui-col-md4">
+      <div style="background-color: hotpink;">4</div>
+    </div>
+    <div class="layui-col-md4">
+      <div style="background-color: hotpink;">4</div>
+    </div>
+  </div>
+
+
+
+<!--  列嵌套-->
+  <div class="layui-row">
+    <div class="layui-col-md4" style="background-color: blue;">
+      <div class="layui-row grid-demo">
+        <div class="layui-col-md3" style="background-color: black;">
+          内部列3
+        </div>
+        <div class="layui-col-md9">
+          内部列9
+        </div>
+        <div class="layui-col-md12" style="background-color: yellow;">
+          内部列12
+        </div>
+      </div>
+    </div>
+    <div class="layui-col-md8">
+      <div class="layui-row grid-demo grid-demo-bg1">
+        <div class="layui-col-md12">
+          内部列
+        </div>
+        <div class="layui-col-md9">
+          内部列
+        </div>
+        <div class="layui-col-md3">
+          内部列
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </body>
 </html>

@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>开始使用 layui</title>
+  <link href="./layui/css/layui.css" rel="stylesheet">
 </head>
 <body>
-$END$
+
+<!-- 你的 HTML 代码 -->
+
+<div class="layui-tab">
+  <ul class="layui-tab-title">
+    <li class="layui-this">标题一</li>
+    <li>标题二</li>
+    <li>标题三</li>
+  </ul>
+  <div class="layui-tab-content">
+    <div class="layui-tab-item layui-show">内容1</div>
+    <div class="layui-tab-item">内容2</div>
+    <div class="layui-tab-item">内容3</div>
+  </div>
+</div>
+
+<script src="./layui/layui.js"></script>
+<script>
+  layui.use(['layer', 'form'], function(){
+    var layer = layui.layer;
+    var form = layui.form;
+
+    layer.msg('Hello World');
+  });
+</script>
 </body>
 </html>

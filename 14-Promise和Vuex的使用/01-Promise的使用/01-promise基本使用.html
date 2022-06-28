@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+  new Promise((resolve,reject) => {
+    //异步操作
+    setTimeout(() =>{
+      // 成功的调用
+      resolve('hello world')
+      // 失败的调用
+      reject('error message')
+    },1000)
+  }).then((data) => {
+    console.log(data);
+  }).catch((err)=>{
+    console.log(err);
+  })
+</script>
 </body>
 </html>
